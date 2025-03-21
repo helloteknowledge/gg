@@ -13,6 +13,12 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import isUrl from 'validator/es/lib/isUrl';
+import { createFileRoute } from '@tanstack/react-router'
+
+export const Route = createFileRoute('/')({
+  component: Index,
+})
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -27,7 +33,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
-export default function DashboardPage() {
+export default function Index() {
   
   const [open, setOpen] = useState(false);
   const [sheetUrl, setSheetUrl] = useState('');
